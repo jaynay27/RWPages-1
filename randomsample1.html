@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<TITLE>Kingmaker - Stolen Land</TITLE>
+</HEAD>
+<BODY>
+
+<script language="JavaScript">
+
+// Some Arrays
+
+
+
+function rand(x) {
+  return Math.floor(Math.random() * x) + 1;
+}
+
+function tableResults(argument) {
+
+var aquaticArray = [];
+var forestArray = [];
+var hillsArray = [];
+var mountainsArray = [];
+var tundraArray = [];
+
+aquaticArray.push({"max": 5, "content": rand(6) + " bandits; CR 1"});
+aquaticArray.push({"max": 11, "content": rand(4) + " boars; CR 3"});
+aquaticArray.push({"max": 17, "content": rand(4) + " boggards; CR 3"});
+aquaticArray.push({"max": 21, "content": "1 brush thylacine; CR 2"});
+aquaticArray.push({"max": 28, "content": rand(6) + " elk; CR 5"});
+aquaticArray.push({"max": 32, "content": "1 faerie dragon; CR 2"});
+aquaticArray.push({"max": 35, "content": rand(4) + " grigs; CR 2"});
+aquaticArray.push({"max": 41, "content": "1 grizzly bear; CR 4"});
+aquaticArray.push({"max": 49, "content": "1 hunter; CR 1/3"});
+aquaticArray.push({"max": 57, "content": "1 nixie; CR 1"});
+aquaticArray.push({"max": 62, "content": "1 owlbear; CR 4"});
+aquaticArray.push({"max": 69, "content": "1 shambling mound; CR 6"});
+aquaticArray.push({"max": 75, "content": "1 slurk; CR 2"});
+aquaticArray.push({"max": 79, "content": "1 tatzlwyrm; CR 2"});
+aquaticArray.push({"max": 83, "content": rand(4) + " trolls; CR 7"});
+aquaticArray.push({"max": 90, "content": "1 will o wisp; CR 6"});
+aquaticArray.push({"max": 96, "content": rand(6) + " wolves; CR 4"});
+aquaticArray.push({"max": 100, "content": "1 worg; CR 2"});
+
+
+forestArray.push({"max": 4, "content": "1D6 bandits; CR 1"});
+forestArray.push({"max": 11, "content": "1D4 Boars; CR 3"});
+forestArray.push({"max": 14, "content": "1d4 boggards; CR 3"});
+forestArray.push({"max": 20, "content": "1 brush thylacine; CR 2"});
+forestArray.push({"max": 29, "content": "1d6 elk; CR 5"});
+forestArray.push({"max": 35, "content": "1 faerie dragon; CR 2"});
+forestArray.push({"max": 42, "content": "1d4 grigs; CR 2"});
+forestArray.push({"max": 47, "content": "1 grizzly bear; CR 4"});
+forestArray.push({"max": 54, "content": "1 hunter; CR 1/3"});
+forestArray.push({"max": 57, "content": "1d8 mites; CR 1"});
+forestArray.push({"max": 63, "content": "1 owlbear; CR 4"});
+forestArray.push({"max": 68, "content": "1 shambling mound; CR 6"});
+forestArray.push({"max": 71, "content": "1 slurk; CR 2"});
+forestArray.push({"max": 75, "content": "1 tatzlwyrm; CR 2"});
+forestArray.push({"max": 79, "content": "1d4 trolls; CR 7"});
+forestArray.push({"max": 82, "content": "1 werewolf; CR 2"});
+forestArray.push({"max": 85, "content": "1 giant whiptail centipede; CR 3"});
+forestArray.push({"max": 90, "content": "1 will o wisp; CR 6"});
+forestArray.push({"max": 97, "content": "1d6 wolves; CR 4"});
+forestArray.push({"max": 100, "content": "1 worg; CR 2"});
+
+
+hillsArray.push({"max": 8, "content": "1D6 bandits; CR 1"});
+hillsArray.push({"max": 14, "content": "1D4 Boars; CR 3"});
+hillsArray.push({"max": 19, "content": "1 brush thylacine; CR 2"});
+hillsArray.push({"max": 27, "content": "1d6 elk; CR 5"});
+hillsArray.push({"max": 30, "content": "1 faerie dragon; CR 2"});
+hillsArray.push({"max": 35, "content": "1d4 grigs; CR 2"});
+hillsArray.push({"max": 45, "content": "1 hunter; CR 1/3"});
+hillsArray.push({"max": 51, "content": "1d8 Kobolds; CR 1"});
+hillsArray.push({"max": 55, "content": "1d8 mites; CR 1"});
+hillsArray.push({"max": 59, "content": "1 owlbear; CR 4"});
+hillsArray.push({"max": 62, "content": "1 shambling mound; CR 6"});
+hillsArray.push({"max": 67, "content": "1 tatzlwyrm; CR 2"});
+hillsArray.push({"max": 70, "content": "1d4 trolls; CR 7"});
+hillsArray.push({"max": 74, "content": "1 werewolf; CR 2"});
+hillsArray.push({"max": 81, "content": "1 giant whiptail centipede; CR 3"});
+hillsArray.push({"max": 86, "content": "1 will o wisp; CR 6"});
+hillsArray.push({"max": 95, "content": "1d6 wolves; CR 4"});
+hillsArray.push({"max": 100, "content": "1 worg; CR 2"});
+
+
+mountainsArray.push({"max": 7, "content": "1 hoarfrost spirit; CR 3; Pathfinder #51 pg 14"});
+mountainsArray.push({"max": 14, "content": "1 ice troll; CR 4; Bestiary 2 pg 271"});
+mountainsArray.push({"max": 43, "content": "1 yeti; CR 4; Bestiary pg 287"});
+mountainsArray.push({"max": 56, "content": "1 frost drake; CR 7 Bestiary 2 pg 108"});
+mountainsArray.push({"max": 69, "content": "1 frost giant; CR 9 Bestiary pg 149"});
+mountainsArray.push({"max": 75, "content": "1 witchfire; CR 9; Bestiary 2 pg 284"});
+mountainsArray.push({"max": 84, "content": "1 frostfallen mammoth; CR 10; Pathfinder #51 pg 84"});
+mountainsArray.push({"max": 92, "content": "1 saumen kar; CR 10; Pathfinder #51 pg 90"});
+mountainsArray.push({"max": 100, "content": "1 frost worm; CR 12; Bestiary 2 pg 126"});
+
+
+tundraArray.push({"max": 6, "content": "1D6 bandits; CR 1"});
+tundraArray.push({"max": 15, "content": "1D4 Boars; CR 3"});
+tundraArray.push({"max": 20, "content": "1 brush thylacine; CR 2"});
+tundraArray.push({"max": 28, "content": "1d6 elk; CR 5"});
+tundraArray.push({"max": 32, "content": "1 faerie dragon; CR 2"});
+tundraArray.push({"max": 38, "content": "1d4 grigs; CR 2"});
+tundraArray.push({"max": 40, "content": "1 grizzly bear; CR 4"});
+tundraArray.push({"max": 51, "content": "1 hunter; CR 1/3"});
+tundraArray.push({"max": 55, "content": "1d8 Kobolds; CR 1"});
+tundraArray.push({"max": 57, "content": "1d8 mites; CR 1"});
+tundraArray.push({"max": 59, "content": "1 owlbear; CR 4"});
+tundraArray.push({"max": 63, "content": "1 shambling mound; CR 6"});
+tundraArray.push({"max": 66, "content": "1 tatzlwyrm; CR 2"});
+tundraArray.push({"max": 71, "content": "1d4 trolls; CR 7"});
+tundraArray.push({"max": 75, "content": "1 werewolf; CR 2"});
+tundraArray.push({"max": 80, "content": "1 giant whiptail centipede; CR 3"});
+tundraArray.push({"max": 86, "content": "1 will o wisp; CR 6"});
+tundraArray.push({"max": 95, "content": "1d6 wolves; CR 4"});
+tundraArray.push({"max": 100, "content": "1 worg; CR 2"});
+
+
+
+var allArrays = {
+"aquatic": aquaticArray,
+"forest": forestArray,
+"hills": hillsArray,
+"mountains": mountainsArray,
+"tundra": tundraArray
+};
+
+var randomNum = rand(100) + 1;
+var arrayOfChoices = allArrays[argument];
+if (!arrayOfChoices) {
+return "no such set: " + argument;
+}
+
+var chosenString = "";
+for (var itemIndex in arrayOfChoices) {
+var item = arrayOfChoices[itemIndex];
+if (randomNum <= item.max) {
+chosenString = item.content;
+break;
+} 
+}
+return chosenString;
+}
+
+</script>
+
+<form>
+<input type="button" name="Button2" value="Forest" onClick="this.form.textField1.value = 
+
+tableResults('forest')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button1" value="Lake/River" onClick="this.form.textField1.value = 
+
+tableResults('aquatic')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button5" value="Plains" onClick="this.form.textField1.value = 
+
+tableResults('tundra')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button3" value="Hills" onClick="this.form.textField1.value = 
+
+tableResults('hills')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+</BODY>
+</HTML>
