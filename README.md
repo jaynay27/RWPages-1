@@ -1,4 +1,4 @@
 RWPages
 =======
 
-Javascript pages for RealmsWorks
+Javascript and HTML pages for Realm Works
