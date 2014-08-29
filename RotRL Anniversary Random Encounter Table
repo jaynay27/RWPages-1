@@ -1,0 +1,232 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Rise of the Runelords Random Encounters</TITLE>
+</HEAD>
+<BODY>
+
+<script language="JavaScript">
+
+// Some Arrays
+
+
+
+
+function rand(x) {
+return Math.floor(Math.random() * x) + 1;
+}
+
+function tableResults(argument) {
+
+var SandpointArray = [];
+var Yondabakari_RiverArray = [];
+var Varisian_LowlandsArray = [];
+var Hook_Mountain_HinterlandsArray = [];
+var Storval_PlateauArray = [];
+var RuneforgeArray = [];
+var Kodar_MountainArray = [];
+var Xin_ShalastArray = [];
+
+SandpointArray.push({"max": 10, "content": rand(6) + " dire rats; CR 1; Bestiary 232" });
+SandpointArray.push({"max": 20, "content": rand(4) + rand(4) + " mites; CR 1; Bestiary 207"});
+SandpointArray.push({"max": 28, "content": "1 dire bat; CR 2; Bestiary 30"});
+SandpointArray.push({"max": 33, "content": rand(4) + " carrionstorms; CR 3; RotRL 408"});
+SandpointArray.push({"max": 39, "content": rand(6) + rand(6) + " human skeletons; CR 3; Bestiary 250"});
+SandpointArray.push({"max": 53,"content": rand(6) + rand(6) + " goblins; CR 4; Bestiary 156"});
+SandpointArray.push({"max": 62,"content": rand(6) + " goblin dogs; CR 4; Bestiary 157"});
+SandpointArray.push({"max": 74,"content": rand(4) + " rat swarms; CR 4; Bestiary 232"});
+SandpointArray.push({"max": 81,"content": rand(6) + " boars; CR 5; Bestiary 36"});
+SandpointArray.push({"max": 91,"content": rand(4) + rand(4) + " ghouls; CR 5; Bestiary 146"});
+SandpointArray.push({"max": 99,"content": "1 will-o'wisp; CR 6; Bestiary 277"});
+SandpointArray.push({"max": 100,"content": "1 Sandpoint Devil; CR 8; Inner Sea World Guide 311"});
+
+Yondabakari_RiverArray.push({"max": 17, "content": "1 mosquito swarm; CR 3; Bestiary 2 193"});
+Yondabakari_RiverArray.push({"max": 30, "content": rand(6) + rand(6) + " bandits; CR 4; GM Guide 258"});
+Yondabakari_RiverArray.push({"max": 40, "content": rand(6) + " goblin snakes; CR 4; Bestiary 3 132"});
+Yondabakari_RiverArray.push({"max": 49, "content": rand(6) + " constrictor snakes; CR 5; Bestiary 255"});
+Yondabakari_RiverArray.push({"max": 58, "content": rand(8) + rand(8) + " stirges; CR 5; Bestiary 260"});
+Yondabakari_RiverArray.push({"max": 64, "content": rand(4) + " hydras; CR 6; Bestiary 178"});
+Yondabakari_RiverArray.push({"max": 71, "content": "1 shambling mound; CR 6; Bestiary 246"});
+Yondabakari_RiverArray.push({"max": 82, "content": rand(6) + rand(6) + " boggards; CR 7; Bestiary 37"});
+Yondabakari_RiverArray.push({"max": 89, "content": rand(4) + " giant gars; CR 8; Bestiary 2 128"});
+Yondabakari_RiverArray.push({"max": 94, "content": "1 marsh giant; CR 8; Bestiary 2 129"});
+Yondabakari_RiverArray.push({"max": 100, "content": "1 giant snapping turtle; CR 9; Bestiary 2 273"});
+
+Varisian_LowlandsArray.push({"max": 9, "content": "1 giant black widow spider; CR 3; Bestiary 2 256"});
+Varisian_LowlandsArray.push({"max": 17, "content": rand(4) + " lyrakien azatas; CR 4; Bestiary 2 38"});
+Varisian_LowlandsArray.push({"max": 32, "content": rand(6) + " horses; CR 4; Bestiary 177"});
+Varisian_LowlandsArray.push({"max": 44, "content": rand(8) + rand(8) + " goblins; CR 4; Bestiary 156"});
+Varisian_LowlandsArray.push({"max": 52, "content": "1 manticore; CR 5; Bestiary 199"});
+Varisian_LowlandsArray.push({"max": 60, "content": rand(6) + " ogres; CR 5 Bestiary 220"});
+Varisian_LowlandsArray.push({"max": 68, "content": rand(6) + " fire pelt cougars; CR 5; Bestiary 40"});
+Varisian_LowlandsArray.push({"max": 82, "content": rand(4) + rand(4) + " wanderers; CR 6 GM Guide 290"});
+Varisian_LowlandsArray.push({"max": 88, "content": "1 hill giant; CR 7; Bestiary 150"});
+Varisian_LowlandsArray.push({"max": 96, "content": rand(6) + " harpies; CR 7; Bestiary 172"});
+Varisian_LowlandsArray.push({"max": 100, "content": "1 wolf-in-sheep's clothing; CR 8; Bestiary 3 285"});
+
+Hook_Mountain_HinterlandsArray.push({"max": 12, "content": rand(4) + rand(4) + " ogrekin; CR 5; Bestiary 2 204"});
+Hook_Mountain_HinterlandsArray.push({"max": 22, "content": rand(4) + " trappers; CR 5; GM Guide 276"});
+Hook_Mountain_HinterlandsArray.push({"max": 29, "content": rand(6) + " dire wolves; CR 6; Bestiary 278"});
+Hook_Mountain_HinterlandsArray.push({"max": 42, "content": "1 ettin; CR 6 Bestiary 130"});
+Hook_Mountain_HinterlandsArray.push({"max": 48, "content": rand(6) + " giant scorpions; CR 6 Bestiary 242"});
+Hook_Mountain_HinterlandsArray.push({"max": 55, "content": rand(4) + " grizzly bears; CR 6; Bestiary 31"});
+Hook_Mountain_HinterlandsArray.push({"max": 59, "content": rand(4) + " flame drakes; CR 7; Bestiary 2 106"});
+Hook_Mountain_HinterlandsArray.push({"max": 67, "content": rand(8) + " ogres; CR 7; Bestiary 220"});
+Hook_Mountain_HinterlandsArray.push({"max": 75, "content": rand(6) + " pixies; CR 7; Bestiary 228"});
+Hook_Mountain_HinterlandsArray.push({"max": 82, "content": "1 giant tarantula; CR 8; Bestiary 2 256"});
+Hook_Mountain_HinterlandsArray.push({"max": 90, "content": rand(6) + " trolls; CR 8; Bestiary 268"});
+Hook_Mountain_HinterlandsArray.push({"max": 96, "content": "3 annis hags; CR 9; Bestiary 3 16"});
+Hook_Mountain_HinterlandsArray.push({"max": 100, "content": "1 nereid; CR 10 Bestiary 2 198"});
+
+Storval_PlateauArray.push({"max": 9, "content": rand(8) + " giant geckos; CR 5; Bestiary 3 186"});
+Storval_PlateauArray.push({"max": 17, "content": rand(6) + " giant eagles; CR 6; Bestiary 118"});
+Storval_PlateauArray.push({"max": 27, "content": rand(4) + " venomous snake swarms; CR 6; Bestiary 3 249"});
+Storval_PlateauArray.push({"max": 36, "content": rand(6) + " giant vultures; CR 7; Bestiary 3 284"});
+Storval_PlateauArray.push({"max": 45, "content": rand(6) + rand(6) + rand(6) + " aurochs; CR 8; Bestiary 174"});
+Storval_PlateauArray.push({"max": 55, "content": rand(4) + rand(4) + " ogres; CR 8; Bestiary 220"});
+Storval_PlateauArray.push({"max": 60, "content": rand(4) + " bulettes; CR 8; Bestiary 39"});
+Storval_PlateauArray.push({"max": 72, "content": rand(6) + " raiders; CR 8 GM Guide 280"});
+Storval_PlateauArray.push({"max": 78, "content": rand(8) + " army ant swarms; CR 9; Bestiary 16"});
+Storval_PlateauArray.push({"max": 82, "content": rand(6) + rand(6) + " gargoyles; CR 9; Bestiary 137"});
+Storval_PlateauArray.push({"max": 86, "content": rand(4) + " hill giants; CR 9 Bestiary 150"});
+Storval_PlateauArray.push({"max": 92, "content": rand(6) + " wyverns; CR 9; Bestiary 282"});
+Storval_PlateauArray.push({"max": 95, "content": rand(3) + " runeslave hill giants; CR 9; RotRL 412"});
+Storval_PlateauArray.push({"max": 100, "content": rand(4) + " stone giants; CR 10; Bestiary 151"});
+
+RuneforgeArray.push({"max": 6, "content": rand(8) + " incubus demons; CR 10; Bestiary 3 73"});
+RuneforgeArray.push({"max": 16, "content": rand(4) + " stone giants; CR 10; Bestiary 151"});
+RuneforgeArray.push({"max": 22, "content": rand(6) + " Thassilonian mummies; CR 10; RotRL 259"});
+RuneforgeArray.push({"max": 32, "content": rand(6) + " warriors of wrath; CR 10; RotRL 292"});
+RuneforgeArray.push({"max": 40, "content": rand(4) + " sinspawn axe men; CR 11; RotRL 293"});
+RuneforgeArray.push({"max": 48, "content": rand(4) + " succubus demons; CR 11; Bestiary 68"});
+RuneforgeArray.push({"max": 58, "content": "1 stone golem; CR 11; Bestiary 163"});
+RuneforgeArray.push({"max": 67, "content": rand(8) + rand(8) + " wraiths; CR 11 Bestiary 281"});
+RuneforgeArray.push({"max": 74, "content": "1 coloxus demon; CR 12; Bestiary 3 72"});
+RuneforgeArray.push({"max": 82, "content": "1 omox demon; CR 12; Bestiary 2 79"});
+RuneforgeArray.push({"max": 88, "content": "1 shining child; CR 12 Bestiary 2 245"});
+RuneforgeArray.push({"max": 94, "content": "1 glabrezu demon; CR 13; Bestiary 61"});
+RuneforgeArray.push({"max": 100, "content": "1 fiendish mustard jelly; CR 14; RotRL 257"});
+
+Kodar_MountainArray.push({"max": 16, "content": rand(4) + rand(4) + " yetis; CR 8; Bestiary 287"});
+Kodar_MountainArray.push({"max": 27, "content": rand(6) + " archaeologists; CR 9; GM Guide 297"});
+Kodar_MountainArray.push({"max": 37, "content": "1 roc; CR 9; Bestiary 236"});
+Kodar_MountainArray.push({"max": 46, "content": rand(4) + " spectres; CR 9; Bestiary 256"});
+Kodar_MountainArray.push({"max": 52, "content": "1 adult white dragon; CR 10; Bestiary 100"});
+Kodar_MountainArray.push({"max": 62, "content": rand(8) + " wyverns; CR 10; Bestiary 282"});
+Kodar_MountainArray.push({"max": 66, "content": "1 thunderbird; CR 11; Bestiary 2 264"});
+Kodar_MountainArray.push({"max": 74, "content": rand(6) + " frost giants; CR 12 Bestiary 149"});
+Kodar_MountainArray.push({"max": 78, "content": "1 frost worm; CR 12; Bestiary 2 126"});
+Kodar_MountainArray.push({"max": 83, "content": rand(4) + rand(4) + " kuchrimas; CR 12; RotRL 411"});
+Kodar_MountainArray.push({"max": 85, "content": "1 rusalka; CR 12 Bestiary 3 232"});
+Kodar_MountainArray.push({"max": 88, "content": rand(8) + " shantaks; CR 12; Bestiary 2 244"});
+Kodar_MountainArray.push({"max": 92, "content": "1 taiga giant; CR 12; Bestiary 2 131"});
+Kodar_MountainArray.push({"max": 96, "content": rand(4) + " cloud giants; CR 13; Bestiary 147"});
+Kodar_MountainArray.push({"max": 99, "content": "1 hungerer; CR 15; RotRL 410"});
+Kodar_MountainArray.push({"max": 100, "content": "1 wendigo; CR 17; Bestiary 2 281"});
+
+Xin_ShalastArray.push({"max": 15, "content": rand(8) + " kuchrimas; CR 12; RotRL 411"});
+Xin_ShalastArray.push({"max": 22, "content": rand(4) + rand(4) + " hill giants; CR 12; Bestiary 150"});
+Xin_ShalastArray.push({"max": 28, "content": rand(6) + " frost giants; CR 12; Bestiary 149"});
+Xin_ShalastArray.push({"max": 32, "content": rand(6) + " vampire skulks; CR 12; RotRL 331"});
+Xin_ShalastArray.push({"max": 37, "content": "1 frost worm; CR 12; Bestiary 2 126"});
+Xin_ShalastArray.push({"max": 44, "content": "1 scarlet walker; CR 12; RotRL 414"});
+Xin_ShalastArray.push({"max": 48, "content": rand(8) + " denizens of Leng; CR 12; Bestiary 2 82"});
+Xin_ShalastArray.push({"max": 53, "content": rand(4) + " cloud giants; CR 13 Bestiary 147"});
+Xin_ShalastArray.push({"max": 57, "content": "1 storm giant; CR 13; Bestiary 152"});
+Xin_ShalastArray.push({"max": 66, "content": rand(4) + rand(4) + " stone giants; CR 13; Bestiary 151"});
+Xin_ShalastArray.push({"max": 75, "content": rand(6) + " abominable snowmen; CR 13 RotRL 328"});
+Xin_ShalastArray.push({"max": 80, "content": rand(4) + " lamia matriarchs; CR 14; Bestiary 2 175"});
+Xin_ShalastArray.push({"max": 87, "content": "1 mountain roper; CR 15; RotRL 336"});
+Xin_ShalastArray.push({"max": 91, "content": "1 hungerer; CR 15; RotRL 410"});
+Xin_ShalastArray.push({"max": 95, "content": rand(3) + " rune giants; CR 16; Bestiary 2 130"});
+Xin_ShalastArray.push({"max": 97, "content": "Gamigin; CR 16; RotRL 335"});
+Xin_ShalastArray.push({"max": 100, "content": "Ghlorofaex; CR 17; RotRL 338"});
+
+var allArrays = {
+"Sandpoint": SandpointArray,
+"Yondabakari_River": Yondabakari_RiverArray,
+"Varisian_Lowlands": Varisian_LowlandsArray,
+"Hook_Mountain_Hinterlands": Hook_Mountain_HinterlandsArray,
+"Storval_Plateau": Storval_PlateauArray,
+"Runeforge": RuneforgeArray,
+"Kodar_Mountain": Kodar_MountainArray,
+"Xin_Shalast": Xin_ShalastArray
+};
+
+var randomNum = rand(100) + 1;
+var arrayOfChoices = allArrays[argument];
+if (!arrayOfChoices) {
+return "no such set: " + argument;
+}
+
+var chosenString = "";
+for (var itemIndex in arrayOfChoices) {
+var item = arrayOfChoices[itemIndex];
+if (randomNum <= item.max) {
+chosenString = item.content;
+break;
+} 
+}
+return chosenString;
+}
+
+</script>
+
+<form>
+<input type="button" name="Button1" value="Sandpoint" onClick="this.form.textField1.value = 
+
+tableResults('Sandpoint')" size="" />
+<textarea name="textField1" cols="50" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button2" value="Yondabakari River" onClick="this.form.textField1.value = 
+
+tableResults('Yondabakari_River')" size="" />
+<textarea name="textField1" cols="50" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button3" value="Varisian Lowlands" onClick="this.form.textField1.value = 
+
+tableResults('Varisian_Lowlands')" size="" />
+<textarea name="textField1" cols="50" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button4" value="Hook Mountain Hinterlands" onClick="this.form.textField1.value = 
+
+tableResults('Hook_Mountain_Hinterlands')" size="" />
+<textarea name="textField1" cols="50" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button5" value="Storval Plateau" onClick="this.form.textField1.value = 
+
+tableResults('Storval_Plateau')" size="" />
+<textarea name="textField1" cols="50" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button6" value="Runeforge" onClick="this.form.textField1.value = 
+
+tableResults('Runeforge')" size="" />
+<textarea name="textField1" cols="50" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button7" value="Kodar Mountain" onClick="this.form.textField1.value = 
+
+tableResults('Kodar_Mountain')" size="" />
+<textarea name="textField1" cols="50" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button8" value="Xin-Shalast" onClick="this.form.textField1.value = 
+
+tableResults('Xin_Shalast')" size="" />
+<textarea name="textField1" cols="50" rows="1" wrap="soft"></textarea>
+</form>
+
+</BODY>
+</HTML>
