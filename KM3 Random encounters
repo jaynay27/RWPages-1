@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<TITLE>Kingmaker - The Varnhold Vanashing</TITLE>
+</HEAD>
+<BODY>
+
+<script language="JavaScript">
+
+// Some Arrays
+
+
+
+function rand(x) {
+return Math.floor(Math.random() * x) + 1;
+}
+
+function tableResults(argument) {
+
+var hexencounterArray = [];
+var DayornightArray = [];
+var mountainArray = [];
+var lakeArray = [];
+var plainsArray = [];
+var hillsArray = [];
+
+hexencounterArray.push({"max": 5, "content": "Random Encounter"});
+hexencounterArray.push({"max": 100, "content": "No Encounter"});
+
+DayornightArray.push({"max": 15, "content": "Random Encounter"});
+DayornightArray.push({"max": 100, "content": "No Encounter"});
+
+mountainArray.push({"max": 3, "content": rand (4) + " tatzlwyrms; CR 4"});
+mountainArray.push({"max": 13, "content": "1 Grizzly Bear; CR 4"});
+mountainArray.push({"max": 17, "content": rand(4) + " cockatrices; CR 5"});
+mountainArray.push({"max": 26, "content": rand(4) + " giant eagles; CR 5"});
+mountainArray.push({"max": 35, "content": "1 manticore; CR 5"});
+mountainArray.push({"max": 42, "content": "1 Wyvern; CR 6"});
+mountainArray.push({"max": 47, "content": rand(4) + rand (4) + " worgs; CR 6"});
+mountainArray.push({"max": 53, "content": "1 chimera; CR 7"});
+mountainArray.push({"max": 63, "content": rand(6) + " Gargoyles; CR 7"});
+mountainArray.push({"max": 70, "content": rand(6) + " Cyclopes; CR 8"});
+mountainArray.push({"max": 78, "content": "1 roc; CR 9"});
+mountainArray.push({"max": 84, "content": rand(4) + " stygiras; CR 9"});
+mountainArray.push({"max": 91, "content": "1 peluda; CR 10"});
+mountainArray.push({"max": 96, "content": "1 great cyclops; CR 12"});
+mountainArray.push({"max": 100, "content": "1 silver dragon; CR 14"});
+
+
+lakeArray.push({"max": 6, "content": rand (4) + " tatzlwyrms; CR 4"});
+lakeArray.push({"max": 14, "content": "1 Grizzly Bear; CR 4"});
+lakeArray.push({"max": 17, "content": rand(4) + " cockatrices; CR 5"});
+lakeArray.push({"max": 26, "content": "1 manticore; CR 5"});
+lakeArray.push({"max": 35, "content": rand(4) + " spriggans; CR 5"});
+lakeArray.push({"max": 41, "content": "1 will o wisp; CR 6"});
+lakeArray.push({"max": 49, "content": rand(4) + rand (4) + " worgs; CR 6"});
+lakeArray.push({"max": 64, "content": rand(6) + " elk; CR 6"});
+lakeArray.push({"max": 70, "content": rand(4) + " blodeuwedds; CR 8"});
+lakeArray.push({"max": 83, "content": "1 mastodon; CR 9"});
+lakeArray.push({"max": 91, "content": "1 roc; CR 9"});
+lakeArray.push({"max": 98, "content": "1 peluda; CR 10"});
+lakeArray.push({"max": 100, "content": "1 silver dragon; CR 14"});
+
+plainsArray.push({"max": 4, "content": rand(4) + " cockatrices; CR 5"});
+plainsArray.push({"max": 10, "content": rand(4) + " giant eagles; CR 5"});
+plainsArray.push({"max": 23, "content": "1 manticore; CR 5"});
+plainsArray.push({"max": 31, "content": rand(4) + " spriggans; CR 5"});
+plainsArray.push({"max": 34, "content": "1 Wyvern; CR 6"});
+plainsArray.push({"max": 40, "content": rand(4) + rand (4) + " worgs; CR 6"});
+plainsArray.push({"max": 51, "content": rand(6) + " elk; CR 6"});
+plainsArray.push({"max": 55, "content": "1 chimera; CR 7"});
+plainsArray.push({"max": 59, "content": "1 bulette; CR 7"});
+plainsArray.push({"max": 63, "content": rand(6) + " Cyclopes; CR 8"});
+plainsArray.push({"max": 75, "content": rand(6) + rand(6) + " centaurs; CR 8"});
+plainsArray.push({"max": 80, "content": rand(4) + " blodeuwedds; CR 8"});
+plainsArray.push({"max": 87, "content": "1 mastodon; CR 9"});
+plainsArray.push({"max": 93, "content": "1 roc; CR 9"});
+plainsArray.push({"max": 100, "content": "1 peluda; CR 10"});
+
+hillsArray.push({"max": 8, "content": "1 Grizzly Bear; CR 4"});
+hillsArray.push({"max": 14, "content": rand(4) + " giant eagles; CR 5"});
+hillsArray.push({"max": 27, "content": "1 manticore; CR 5"});
+hillsArray.push({"max": 36, "content": rand(4) + " spriggans; CR 5"});
+hillsArray.push({"max": 42, "content": "1 Wyvern; CR 6"});
+hillsArray.push({"max": 45, "content": "1 chimera; CR 7"});
+hillsArray.push({"max": 51, "content": "1 bulette; CR 7"});
+hillsArray.push({"max": 57, "content": rand(6) + " Gargoyles; CR 7"});
+hillsArray.push({"max": 62, "content": rand(6) + " Cyclopes; CR 8"});
+hillsArray.push({"max": 67, "content": rand(6) + rand(6) + " centaurs; CR 8"});
+hillsArray.push({"max": 75, "content": "1 mastodon; CR 9"});
+hillsArray.push({"max": 82, "content": "1 roc; CR 9"});
+hillsArray.push({"max": 86, "content": rand(4) + " stygiras; CR 9"});
+hillsArray.push({"max": 93, "content": "1 peluda; CR 10"});
+hillsArray.push({"max": 96, "content": "1 great cyclops; CR 12"});
+hillsArray.push({"max": 100, "content": "1 silver dragon; CR 14"});
+
+
+
+var allArrays = {
+"Hex": hexencounterArray,
+"DayNight": DayornightArray,
+"lake": lakeArray,
+"mountain": mountainArray,
+"hills": hillsArray,
+"plains": plainsArray
+};
+
+var randomNum = rand(100) + 1;
+var arrayOfChoices = allArrays[argument];
+if (!arrayOfChoices) {
+return "no such set: " + argument;
+}
+
+var chosenString = "";
+for (var itemIndex in arrayOfChoices) {
+var item = arrayOfChoices[itemIndex];
+if (randomNum <= item.max) {
+chosenString = item.content;
+break;
+} 
+}
+return chosenString;
+}
+
+</script>
+
+As the PCs enter a hex, hit the button to see if there is an encounter (5% chance)
+
+<form>
+<input type="button" name="Button1" value="Hex Encounter" onClick="this.form.textField1.value = 
+
+tableResults('Hex')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+For each day or night cycle spent exploring, hit the button to see if there is an encounter (15% chance) 
+
+<form>
+<input type="button" name="Button2" value="Day or Night encounter" onClick="this.form.textField1.value = 
+
+tableResults('DayNight')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+If there is a random encounter, hit the button of the corresponding terrain to generate an encounter.
+
+<form>
+<input type="button" name="Button4" value="Lake/River" onClick="this.form.textField1.value = 
+
+tableResults('lake')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button3" value="Mountain" onClick="this.form.textField1.value = 
+
+tableResults('mountain')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button5" value="Plains" onClick="this.form.textField1.value = 
+
+tableResults('plains')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button6" value="Hills" onClick="this.form.textField1.value = 
+
+tableResults('hills')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+</BODY>
+</HTML>
