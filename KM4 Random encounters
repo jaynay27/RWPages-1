@@ -1,0 +1,184 @@
+<HTML>
+<HEAD>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<TITLE>Kingmaker - Rivers Run Red</TITLE>
+</HEAD>
+<BODY>
+
+<script language="JavaScript">
+
+// Some Arrays
+
+
+
+function rand(x) {
+return Math.floor(Math.random() * x) + 1;
+}
+
+function tableResults(argument) {
+
+var hexencounterArray = [];
+var DayornightArray = [];
+var hillsArray = [];
+var lakeArray = [];
+var plainsArray = [];
+var swampArray = [];
+
+hexencounterArray.push({"max": 5, "content": "Random Encounter"});
+hexencounterArray.push({"max": 100, "content": "No Encounter"});
+
+DayornightArray.push({"max": 15, "content": "Random Encounter"});
+DayornightArray.push({"max": 100, "content": "No Encounter"});
+
+hillsArray.push({"max": 6, "content": rand(4) + " constrictor snakes; CR 4"});
+hillsArray.push({"max": 15, "content": rand(6) + rand(6) + " zombies; CR 4"});
+hillsArray.push({"max": 25, "content": "1 Basilisk; CR 5"});
+hillsArray.push({"max": 39, "content": rand(6) + " Elk; CR 5"});
+hillsArray.push({"max": 48, "content": "1 ettin; CR 6"});
+hillsArray.push({"max": 53, "content": rand(6) + " calathgars; CR 7"});
+hillsArray.push({"max": 61, "content": "1 dark naga; CR 8"});
+hillsArray.push({"max": 65, "content": rand(6) + " basidironds; CR 8"});
+hillsArray.push({"max": 72, "content": rand(4) + " dracolisks; CR 9"});
+hillsArray.push({"max": 78, "content": "1 nuckelavee; CR 9"});
+hillsArray.push({"max": 87, "content": rand(6) + " will-o’-wisps; CR 9"});
+hillsArray.push({"max": 93, "content": rand (8) + " shambling mounds; CR 10"});
+hillsArray.push({"max": 98, "content": rand(6) + " spirit nagas; CR 12"});
+hillsArray.push({"max": 100, "content": rand(4) + " adult black dragons; CR 13"});
+
+lakeArray.push({"max": 8, "content": rand(4) + " constrictor snakes; CR 4"});
+lakeArray.push({"max": 21, "content": rand(6) + " Elk; CR 5"});
+lakeArray.push({"max": 27, "content": "1 ahuizotl; CR 6"});
+lakeArray.push({"max": 35, "content": rand(4) + rand(4) + " giant leeches; CR 6"});
+lakeArray.push({"max": 42, "content": rand(6) + rand(6) + " boggards; CR 7"});
+lakeArray.push({"max": 46, "content": "1 dark naga; CR 8"});
+lakeArray.push({"max": 53, "content": "1 giant Slug; CR 8"});
+lakeArray.push({"max": 63, "content": rand(6) + " swamp eels (Same as giant moray eel); CR 8"});
+lakeArray.push({"max": 69, "content": rand(8) + rand(8) + " bog striders; CR 8"});
+lakeArray.push({"max": 77, "content": "1 nuckelavee; CR 9"});
+lakeArray.push({"max": 84, "content": rand(6) + " will-o’-wisps; CR 9"});
+lakeArray.push({"max": 89, "content": rand(6) + " chuuls; CR 10"});
+lakeArray.push({"max": 95, "content": rand (8) + " shambling mounds; CR 10"});
+lakeArray.push({"max": 98, "content": rand(6) + " spirit nagas; CR 12"});
+lakeArray.push({"max": 100, "content": rand(4) + " adult black dragons; CR 13"});
+
+plainsArray.push({"max": 3, "content": rand(4) + " constrictor snakes; CR 4"});
+plainsArray.push({"max": 11, "content": rand(6) + rand(6) + " zombies; CR 4"});
+plainsArray.push({"max": 20, "content": "1 Basilisk; CR 5"});
+plainsArray.push({"max": 36, "content": rand(6) + " Elk; CR 5"});
+plainsArray.push({"max": 47, "content": "1 ettin; CR 6"});
+plainsArray.push({"max": 52, "content": rand(6) + rand(6) + " boggards; CR 7"});
+plainsArray.push({"max": 55, "content": rand(6) + " calathgars; CR 7"});
+plainsArray.push({"max": 62, "content": "1 dark naga; CR 8"});
+plainsArray.push({"max": 71, "content": rand(4) + " dracolisks; CR 9"});
+plainsArray.push({"max": 76, "content": "1 nuckelavee; CR 9"});
+plainsArray.push({"max": 84, "content": rand(6) + " will-o’-wisps; CR 9"});
+plainsArray.push({"max": 90, "content": rand (8) + " shambling mounds; CR 10"});
+plainsArray.push({"max": 93, "content": "1 hezrou; CR 11"});
+plainsArray.push({"max": 98, "content": rand(6) + " spirit nagas; CR 12"});
+plainsArray.push({"max": 100, "content": rand(4) + " adult black dragons; CR 13"});
+
+swampArray.push({"max": 6, "content": "Quicksand"});
+swampArray.push({"max": 10, "content": rand(4) + " constrictor snakes; CR 4"});
+swampArray.push({"max": 13, "content": rand(6) + rand(6) + " zombies; CR 4"});
+swampArray.push({"max": 15, "content": "1 Basilisk; CR 5"});
+swampArray.push({"max": 17, "content": "1 ahuizotl; CR 6"});
+swampArray.push({"max": 22, "content": rand(4) + rand(4) + " giant leeches; CR 6"});
+swampArray.push({"max": 30, "content": rand(6) + rand(6) + " boggards; CR 7"});
+swampArray.push({"max": 35, "content": rand(6) + " calathgars; CR 7"});
+swampArray.push({"max": 43, "content": "Camouflaged spiked pit trap; CR 8"});
+swampArray.push({"max": 47, "content": "1 dark naga; CR 8"});
+swampArray.push({"max": 53, "content": "1 giant slug; CR 8"});
+swampArray.push({"max": 59, "content": rand(6) + " swamp eels (Same as giant moray eel); CR 8"});
+swampArray.push({"max": 62, "content": "3 green hags; CR 8"});
+swampArray.push({"max": 66, "content": rand(6) + " basidironds; CR 8"});
+swampArray.push({"max": 71, "content": rand(8) + rand(8) + " bog striders; CR 8"});
+swampArray.push({"max": 74, "content": rand(4) + " dracolisks; CR 9"});
+swampArray.push({"max": 77, "content": "1 nuckelavee; CR 9"});
+swampArray.push({"max": 82, "content": rand(6) + " will-o’-wisps; CR 9"});
+swampArray.push({"max": 85, "content": rand(6) + " chuuls; CR 10"});
+swampArray.push({"max": 89, "content": rand (8) + " shambling mounds; CR 10"});
+swampArray.push({"max": 91, "content": rand(4) + " treants; CR 10"});
+swampArray.push({"max": 93, "content": "1 hezrou; CR 11"});
+swampArray.push({"max": 96, "content": rand(6) + " spirit nagas; CR 12"});
+swampArray.push({"max": 100, "content": rand(4) + " adult black dragons; CR 13"});
+
+
+
+var allArrays = {
+"Hex": hexencounterArray,
+"DayNight": DayornightArray,
+"lake": lakeArray,
+"hills": hillsArray,
+"swamp": swampArray,
+"plains": plainsArray
+};
+
+var randomNum = rand(100) + 1;
+var arrayOfChoices = allArrays[argument];
+if (!arrayOfChoices) {
+return "no such set: " + argument;
+}
+
+var chosenString = "";
+for (var itemIndex in arrayOfChoices) {
+var item = arrayOfChoices[itemIndex];
+if (randomNum <= item.max) {
+chosenString = item.content;
+break;
+} 
+}
+return chosenString;
+}
+
+</script>
+
+As the PCs enter a hex, hit the button to see if there is an encounter (5% chance)
+
+<form>
+<input type="button" name="Button1" value="Hex Encounter" onClick="this.form.textField1.value = 
+
+tableResults('Hex')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+For each day or night cycle spent exploring, hit the button to see if there is an encounter (15% chance) 
+
+<form>
+<input type="button" name="Button2" value="Day or Night encounter" onClick="this.form.textField1.value = 
+
+tableResults('DayNight')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+If there is a random encounter, hit the button of the corresponding terrain to generate an encounter.
+
+<form>
+<input type="button" name="Button3" value="Hills" onClick="this.form.textField1.value = 
+
+tableResults('hills')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button4" value="Lake/River" onClick="this.form.textField1.value = 
+
+tableResults('lake')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button5" value="Plains" onClick="this.form.textField1.value = 
+
+tableResults('plains')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button6" value="Swamp" onClick="this.form.textField1.value = 
+
+tableResults('swamp')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+</BODY>
+</HTML>
