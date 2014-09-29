@@ -1,0 +1,253 @@
+<HTML>
+<HEAD>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<TITLE>Kingmaker - War of the River Kings - Glenebon</TITLE>
+</HEAD>
+<BODY>
+
+<script language="JavaScript">
+
+// Some Arrays
+
+
+
+function rand(x) {
+return Math.floor(Math.random() * x) + 1;
+}
+
+function tableResults(argument) {
+
+var hexencounterArray = [];
+var DayornightArray = [];
+var chexencounterArray = [];
+var cDayornightArray = [];
+var forestArray = [];
+var hillsArray = [];
+var lakeArray = [];
+var mountainsArray = [];
+var plainsArray = [];
+
+hexencounterArray.push({"max": 5, "content": "Random Encounter"});
+hexencounterArray.push({"max": 100, "content": "No Encounter"});
+
+DayornightArray.push({"max": 15, "content": "Random Encounter"});
+DayornightArray.push({"max": 100, "content": "No Encounter"});
+
+chexencounterArray.push({"max": 2, "content": "Random Encounter"});
+chexencounterArray.push({"max": 100, "content": "No Encounter"});
+
+cDayornightArray.push({"max": 5, "content": "Random Encounter"});
+cDayornightArray.push({"max": 100, "content": "No Encounter"});
+
+forestArray.push({"max": 3, "content": "1 carbuncle; CR 1"});
+forestArray.push({"max": 6, "content": "1 cockatrice; CR 3"});
+forestArray.push({"max": 9, "content": rand(6) + " nixies; CR 4"});
+forestArray.push({"max": 14, "content": "1 Hodag; CR 5"});
+forestArray.push({"max": 21, "content": rand(4) + " grizzly bears; CR 6"});
+forestArray.push({"max": 31, "content": rand (6) + " elk; CR 6"});
+forestArray.push({"max": 37, "content": rand(4) + rand(4) + " faerie dragons; CR 6"});
+forestArray.push({"max": 46, "content": rand(6) + rand(6) + " worgs; CR 7"});
+forestArray.push({"max": 51, "content": rand(4) + rand(4) + " dryads; CR 7"});
+forestArray.push({"max": 53, "content": rand(4) + " ettins; CR 8"});
+forestArray.push({"max": 59, "content": rand(8) + " owlbears; CR 8"});
+forestArray.push({"max": 67, "content": rand(4) + rand(4) + rand(4) + " pixies; CR 9"});
+forestArray.push({"max": 73, "content": rand(6) + " shambling mounds; CR 9"});
+forestArray.push({"max": 79, "content": rand(4) + " dire bears; CR 9"});
+forestArray.push({"max": 83, "content": rand(6) + " wyverns; CR 10"});
+forestArray.push({"max": 87, "content": rand(6) + " nymphs; CR 10"});
+forestArray.push({"max": 92, "content": rand(4) + " treants; CR 10"});
+forestArray.push({"max": 95, "content": rand(8) + " hill giants; CR 11"});
+forestArray.push({"max": 98, "content": rand(4) + " greater verdurous oozes; CR 13"});
+forestArray.push({"max": 100, "content": "1 ancient black dragon; CR 16"});
+
+hillsArray.push({"max": 7, "content": "1 cockatrice; CR 3"});
+hillsArray.push({"max": 11, "content": "1 Hodag; CR 5"});
+hillsArray.push({"max": 19, "content": rand(4) + " grizzly bears; CR 6"});
+hillsArray.push({"max": 31, "content": rand (6) + " elk; CR 6"});
+hillsArray.push({"max": 33, "content": rand(4) + rand(4) + " faerie dragons; CR 6"});
+hillsArray.push({"max": 44, "content": rand(6) + rand(6) + " worgs; CR 7"});
+hillsArray.push({"max": 51, "content": rand(4) + " ettins; CR 8"});
+hillsArray.push({"max": 56, "content": rand(8) + " owlbears; CR 8"});
+hillsArray.push({"max": 60, "content": rand(4) + rand(4) + rand(4) + " pixies; CR 9"});
+hillsArray.push({"max": 66, "content": rand(6) + " shambling mounds; CR 9"});
+hillsArray.push({"max": 70, "content": rand(4) + " dire bears; CR 9"});
+hillsArray.push({"max": 77, "content": rand(6) + " wyverns; CR 10"});
+hillsArray.push({"max": 83, "content": rand(8) + " hill giants; CR 11"});
+hillsArray.push({"max": 89, "content": rand(4) + " pedulas; CR 12"});
+hillsArray.push({"max": 93, "content": "1 irlgaunt; CR 13"});
+hillsArray.push({"max": 96, "content": rand(4) + " greater verdurous oozes; CR 13"});
+hillsArray.push({"max": 100, "content": "1 ancient black dragon; CR 16"});
+
+lakeArray.push({"max": 4, "content": "1 cockatrice; CR 3"});
+lakeArray.push({"max": 12, "content": rand(6) + " nixies; CR 4"});
+lakeArray.push({"max": 21, "content": rand(4) + " grizzly bears; CR 6"});
+lakeArray.push({"max": 35, "content": rand (6) + " elk; CR 6"});
+lakeArray.push({"max": 39, "content": rand(4) + rand(4) + " faerie dragons; CR 6"});
+lakeArray.push({"max": 46, "content": rand(6) + rand(6) + " worgs; CR 7"});
+lakeArray.push({"max": 49, "content": rand(4) + " ettins; CR 8"});
+lakeArray.push({"max": 55, "content": rand(8) + " owlbears; CR 8"});
+lakeArray.push({"max": 60, "content": rand(4) + rand(4) + rand(4) + " pixies; CR 9"});
+lakeArray.push({"max": 71, "content": rand(6) + " shambling mounds; CR 9"});
+lakeArray.push({"max": 79, "content": rand(4) + " dire bears; CR 9"});
+lakeArray.push({"max": 87, "content": rand(6) + " wyverns; CR 10"});
+lakeArray.push({"max": 91, "content": rand(6) + " nymphs; CR 10"});
+lakeArray.push({"max": 93, "content": rand(8) + " hill giants; CR 11"});
+lakeArray.push({"max": 96, "content": rand(4) + " greater verdurous oozes; CR 13"});
+lakeArray.push({"max": 100, "content": "1 ancient black dragon; CR 16"});
+
+mountainsArray.push({"max": 10, "content": "1 cockatrice; CR 3"});
+mountainsArray.push({"max": 14, "content": "1 Hodag; CR 5"});
+mountainsArray.push({"max": 19, "content": rand(4) + " grizzly bears; CR 6"});
+mountainsArray.push({"max": 30, "content": rand (6) + " elk; CR 6"});
+mountainsArray.push({"max": 32, "content": rand(4) + rand(4) + " faerie dragons; CR 6"});
+mountainsArray.push({"max": 44, "content": rand(6) + rand(6) + " worgs; CR 7"});
+mountainsArray.push({"max": 53, "content": rand(4) + " ettins; CR 8"});
+mountainsArray.push({"max": 60, "content": rand(4) + " bulettes; CR 9"});
+mountainsArray.push({"max": 69, "content": rand(4) + " dire bears; CR 9"});
+mountainsArray.push({"max": 80, "content": rand(6) + " wyverns; CR 10"});
+mountainsArray.push({"max": 90, "content": rand(8) + " hill giants; CR 11"});
+mountainsArray.push({"max": 92, "content": rand(4) + " pedulas; CR 12"});
+mountainsArray.push({"max": 98, "content": "1 irlgaunt; CR 13"});
+mountainsArray.push({"max": 100, "content": "1 ancient black dragon; CR 16"});
+
+plainsArray.push({"max": 2, "content": "1 carbuncle; CR 1"});
+plainsArray.push({"max": 6, "content": "1 cockatrice; CR 3"});
+plainsArray.push({"max": 13, "content": rand(4) + " grizzly bears; CR 6"});
+plainsArray.push({"max": 24, "content": rand (6) + " elk; CR 6"});
+plainsArray.push({"max": 27, "content": rand(4) + rand(4) + " faerie dragons; CR 6"});
+plainsArray.push({"max": 34, "content": rand(6) + rand(6) + " worgs; CR 7"});
+plainsArray.push({"max": 41, "content": rand(4) + " ettins; CR 8"});
+plainsArray.push({"max": 46, "content": rand(8) + " owlbears; CR 8"});
+plainsArray.push({"max": 50, "content": rand(4) + rand(4) + rand(4) + " pixies; CR 9"});
+plainsArray.push({"max": 59, "content": rand(4) + " bulettes; CR 9"});
+plainsArray.push({"max": 64, "content": rand(6) + " shambling mounds; CR 9"});
+plainsArray.push({"max": 68, "content": rand(4) + " dire bears; CR 9"});
+plainsArray.push({"max": 75, "content": rand(6) + " wyverns; CR 10"});
+plainsArray.push({"max": 77, "content": rand(6) + " nymphs; CR 10"});
+plainsArray.push({"max": 86, "content": rand(8) + " hill giants; CR 11"});
+plainsArray.push({"max": 91, "content": "1 irlgaunt; CR 13"});
+plainsArray.push({"max": 98, "content": rand(4) + " greater verdurous oozes; CR 13"});
+plainsArray.push({"max": 100, "content": "1 ancient black dragon; CR 16"});
+
+
+
+var allArrays = {
+"Hex": hexencounterArray,
+"DayNight": DayornightArray,
+"cHex": chexencounterArray,
+"cDayNight": cDayornightArray,
+"lake": lakeArray,
+"forest": forestArray,
+"hills": hillsArray,
+"mountains": hillsArray,
+"plains": plainsArray
+};
+
+var randomNum = rand(100) + 1;
+var arrayOfChoices = allArrays[argument];
+if (!arrayOfChoices) {
+return "no such set: " + argument;
+}
+
+var chosenString = "";
+for (var itemIndex in arrayOfChoices) {
+var item = arrayOfChoices[itemIndex];
+if (randomNum <= item.max) {
+chosenString = item.content;
+break;
+} 
+}
+return chosenString;
+}
+
+</script>
+
+<u>As the PCs explore the Glenebon Uplands, you can liven things up with wandering monsters generated from the tables below.</u><br> <br /> 
+
+<i>Take care not to overwhelm the PCs with random encounters, though; it’s usually good to limit wandering monster encounters to only <b>once per day</b>.</i><br> <br />
+
+<br> <br />
+
+There’s a 5% chance of an encounter occurring each time the PCs enter an <b>unclaimed hex</b>, and a 15% chance per day or night spent exploring or camping in an <b>unclaimed hex</b>.<br> <br />
+ 
+As the PCs enter an <b>unclaimed hex</b>, hit the button to see if there is an encounter (5% chance)
+
+<form>
+<input type="button" name="Button1" value="Unclaimed Hex Encounter" onClick="this.form.textField1.value = 
+
+tableResults('Hex')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+For each day or night cycle spent exploring and <b>unclaimed hex</b>, hit the button to see if there is an encounter (15% chance)
+
+<form>
+<input type="button" name="Button2" value="Unclaimed Hex - Day or Night encounter" onClick="this.form.textField1.value = 
+
+tableResults('DayNight')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<br> <br />
+
+These chances decrease to 1% per hex or 5% per day spent exploring or camping in a <b>claimed hex</b>.<br> <br />
+
+As the PCs enter an <b>claimed hex</b>, hit the button to see if there is an encounter (1% chance)
+
+<form>
+<input type="button" name="Button3" value="Claimed Hex Encounter" onClick="this.form.textField1.value = 
+
+tableResults('cHex')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+For each day or night cycle spent exploring and <b>claimed hex</b>, hit the button to see if there is an encounter (5% chance)
+
+<form>
+<input type="button" name="Button4" value="Claimed Hex - Day or Night encounter" onClick="this.form.textField1.value = 
+
+tableResults('cDayNight')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<br> <br />
+
+If there is a random encounter, hit the button of the corresponding terrain to generate an encounter.
+
+<form>
+<input type="button" name="Button5" value="Forest" onClick="this.form.textField1.value = 
+
+tableResults('forest')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button6" value="Hills" onClick="this.form.textField1.value = 
+
+tableResults('hills')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button7" value="Lake/River" onClick="this.form.textField1.value = 
+
+tableResults('lake')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button8" value="Mountains" onClick="this.form.textField1.value = 
+
+tableResults('mountains')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+<form>
+<input type="button" name="Button9" value="Plains" onClick="this.form.textField1.value = 
+
+tableResults('plains')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+</BODY>
+</HTML>
