@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<TITLE>Kingmaker - Sound of a Thousand Screams - Firstworld</TITLE>
+</HEAD>
+<BODY>
+
+<script language="JavaScript">
+
+// Some Arrays
+
+
+
+function rand(x) {
+return Math.floor(Math.random() * x) + 1;
+}
+
+function tableResults(argument) {
+
+var firstworldArray = [];
+
+
+firstworldArray.push({"max": 5, "content": rand(8) + " unicorns; CR 7"});
+firstworldArray.push({"max": 9, "content": rand(8) + rand(8) + " nixies; CR 7"});
+firstworldArray.push({"max": 14, "content": rand(6) + " grodairs; CR 8"});
+firstworldArray.push({"max": 19, "content": rand(4) + rand(4) + " dryads; CR 8"});
+firstworldArray.push({"max": 23, "content": rand(4) + " dweomercats; CR 9"});
+firstworldArray.push({"max": 29, "content": rand (6) + rand (6) + " satyrs; CR 9"});
+firstworldArray.push({"max": 35, "content": rand(12) + rand(12) + " faerie dragons; CR 9"});
+firstworldArray.push({"max": 41, "content": rand(8) + " skrik nettles; CR 10"});
+firstworldArray.push({"max": 47, "content": rand(6) + rand(6) + rand(6) + " pixies; CR 10"});
+firstworldArray.push({"max": 53, "content": rand(8) + " nymphs; CR 11"});
+firstworldArray.push({"max": 56, "content": rand(6) + " giant slugs; CR 11"});
+firstworldArray.push({"max": 62, "content": "1 athach; CR 12"});
+firstworldArray.push({"max": 67, "content": rand(6) + rand(6) + " treants; CR 13"});
+firstworldArray.push({"max": 70, "content": "1 mandragora swarm; CR 13"});
+firstworldArray.push({"max": 75, "content": "1 winged owlbear; CR 14"});
+firstworldArray.push({"max": 80, "content": rand(8) + " giant flytraps; CR 14"});
+firstworldArray.push({"max": 84, "content": rand(3) + " athachs; CR 15"});
+firstworldArray.push({"max": 87, "content": rand(8) + rand(8) + " frost giants; CR 15"});
+firstworldArray.push({"max": 91, "content": rand(8) + rand(8) + " nuckelavees; CR 15"});
+firstworldArray.push({"max": 94, "content": rand(4) + " crag linnorms; CR 16"});
+firstworldArray.push({"max": 97, "content": rand(6) + " ankous; CR 17"});
+firstworldArray.push({"max": 99, "content": rand(4) + " zomoks; CR 18"});
+firstworldArray.push({"max": 100, "content": "1 lesser jabberwock; CR 20"});
+
+
+
+
+var allArrays = {
+"firstworld": firstworldArray
+};
+
+var randomNum = rand(100) + 1;
+var arrayOfChoices = allArrays[argument];
+if (!arrayOfChoices) {
+return "no such set: " + argument;
+}
+
+var chosenString = "";
+for (var itemIndex in arrayOfChoices) {
+var item = arrayOfChoices[itemIndex];
+if (randomNum <= item.max) {
+chosenString = item.content;
+break;
+} 
+}
+return chosenString;
+}
+
+</script>
+
+
+<form>
+<input type="button" name="Button5" value="First World Encounter" onClick="this.form.textField1.value = 
+
+tableResults('firstworld')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+
+</BODY>
+</HTML>
