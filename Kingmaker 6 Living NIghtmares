@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<TITLE>Kingmaker - Sound of a Thousand Screams - Living Nightmares</TITLE>
+</HEAD>
+<BODY>
+
+<script language="JavaScript">
+
+// Some Arrays
+
+
+
+function rand(x) {
+return Math.floor(Math.random() * x) + 1;
+}
+
+function tableResults(argument) {
+
+var livingnightmaresArray = [];
+
+
+livingnightmaresArray.push({"max": 8, "content": "black tentacles (CMB +25); You’re attacked by a kraken while drowning at sea."});
+livingnightmaresArray.push({"max": 14, "content": "call lightning storm (DC 17); You’re caught in a violent storm with no cover."});
+livingnightmaresArray.push({"max": 17, "content": "create greater undead; You’re lost in a graveyard and chased by a devourer."});
+livingnightmaresArray.push({"max": 24, "content": "creeping doom (DC 20); You’re sinking in quicksand while bugs eat you alive."});
+livingnightmaresArray.push({"max": 36, "content": "dominate person (DC 16); Your friends are possessed—kill them with an axe."});
+livingnightmaresArray.push({"max": 39, "content": "earthquake (DC 22); You’re trapped in your home during an earthquake."});
+livingnightmaresArray.push({"max": 46, "content": "feeblemind (DC 17); You become a newborn baby or a senile old wreck."});
+livingnightmaresArray.push({"max": 49, "content": "fire storm (DC 22); You’re a helpless forest creature caught up in a forest fire."});
+livingnightmaresArray.push({"max": 51, "content": "imprisonment (DC 23); You’re buried alive by friends who think you’re dead."});
+livingnightmaresArray.push({"max": 57, "content": "insanity (DC 20); Hideous alien monstrosities devour your mind."});
+livingnightmaresArray.push({"max": 60, "content": "storm of vengeance (DC 23); The gods open the heavens and smite the world."});
+livingnightmaresArray.push({"max": 63, "content": "summon monster IX; You’re attacked by a glabrezu."});
+livingnightmaresArray.push({"max": 69, "content": "summon monster VI; You’re assaulted by a succubus."});
+livingnightmaresArray.push({"max": 74, "content": "summon monster VII; You’re attacked by a bebilith."});
+livingnightmaresArray.push({"max": 78, "content": "summon monster VIII; You’re attacked by a barbed devil."});
+livingnightmaresArray.push({"max": 81, "content": "summon nature’s ally IX; You’re attacked by 1d3 purple worms."});
+livingnightmaresArray.push({"max": 87, "content": "summon nature’s ally VI; You’re attacked by a dire tiger."});
+livingnightmaresArray.push({"max": 91, "content": "summon nature’s ally VII; You’re attacked by a tyrannosaurus."});
+livingnightmaresArray.push({"max": 96, "content": "summon nature’s ally VIII; You’re attacked by 1d4+1 giant scorpions."});
+livingnightmaresArray.push({"max": 100, "content": "whirlwind (DC 22); You have a broken leg but must outrun a tornado."});
+
+
+
+var allArrays = {
+"nightmare": livingnightmaresArray};
+
+var randomNum = rand(100) + 1;
+var arrayOfChoices = allArrays[argument];
+if (!arrayOfChoices) {
+return "no such set: " + argument;
+}
+
+var chosenString = "";
+for (var itemIndex in arrayOfChoices) {
+var item = arrayOfChoices[itemIndex];
+if (randomNum <= item.max) {
+chosenString = item.content;
+break;
+} 
+}
+return chosenString;
+}
+
+</script>
+
+
+<form>
+<input type="button" name="Button1" value="Living Nightmares" onClick="this.form.textField1.value = 
+
+tableResults('nightmare')" size="" />
+<textarea name="textField1" cols="40" rows="1" wrap="soft"></textarea>
+</form>
+
+</BODY>
+</HTML>
